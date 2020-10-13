@@ -1,0 +1,8 @@
+django
+Pillow
+djangorestframework
+coverage
+flake8
+tox
+mysqlclient
+
