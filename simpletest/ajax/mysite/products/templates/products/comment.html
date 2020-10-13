@@ -1,0 +1,27 @@
+<!-- Dom-->
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ appname }}</title>
+
+</head>
+
+<body>
+    <h1>Comments</h1>
+<div id="commentlist"></div>
+<br>
+    <div>
+ 
+            <input type="text" placeholder="Add a public comment" name="comment">
+            <button type="submit" class="btn btn-primary" id="com">Comment</button>
+            <button type="cancel" class="btn btn-default">Cancel</button>
+
+  </div>
+   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="{% static 'mainapp/comment.js' %}"></script>
+</body>
+
+</html>
