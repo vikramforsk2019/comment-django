@@ -1,0 +1,96 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  {% for message in messages %}
+
+                    <div class="alert alert-success">
+                        <a class="close" href="#" data-dismiss="alert">×</a>
+
+                        {{ message }}
+
+                    </div>
+            {% endfor %}
+
+		{% load static %} 
+<title>Resale_v2 a Classified ads Category Flat Bootstrap Responsive Website Template | Sign in :: w3layouts</title>
+<link rel="stylesheet" href=" {% static 'css/bootstrap.min.css' %} "><!-- bootstrap-CSS -->
+<link rel="stylesheet" href=" {% static 'css/bootstrap-select.css' %} "><!-- bootstrap-select-CSS -->
+<link href=" {% static 'css/style.css' %} " rel="stylesheet" type="text/css" media="all" /><!-- style.css -->
+<link rel="stylesheet" href=" {% static 'css/font-awesome.min.css' %} " /><!-- fontawesome-CSS -->
+<link rel="stylesheet" href=" {% static 'css/menu_sideslide.css' %} " type="text/css" media="all"><!-- Navigation-CSS -->
+<!-- meta tags -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Resale Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //meta tags -->
+<!--fonts-->
+<link href=' {% static '//fonts.googleapis.com/css?family=Ubuntu+Condensed' %} ' rel='stylesheet' type='text/css'>
+<link href=' {% static '//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' %} ' rel='stylesheet' type='text/css'>
+<!--//fonts-->	
+<!-- js -->
+<script type="text/javascript" src=" {% static 'js/jquery.min.js' %} "></script>
+<!-- js -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src=" {% static 'js/bootstrap.js' %} "></script>
+<script src=" {% static 'js/bootstrap-select.js' %} "></script>
+<script>
+  $(document).ready(function () {
+    var mySelect = $('#first-disabled2');
+
+    $('#special').on('click', function () {
+      mySelect.find('option:selected').prop('disabled', true);
+      mySelect.selectpicker('refresh');
+    });
+
+    $('#special2').on('click', function () {
+      mySelect.find('option:disabled').prop('disabled', false);
+      mySelect.selectpicker('refresh');
+    });
+
+    $('#basic2').selectpicker({
+      liveSearch: true,
+      maxOptions: 1
+    });
+  });
+</script>
+
+</head>
+<body>
+
+	<!-- sign in form -->
+	 <section>
+		<div id="agileits-sign-in-page" class="sign-in-wrapper">
+			<div class="agileinfo_signin">
+				<a href="/signup/" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i> Sign Up</a>
+			<h3>Sign In</h3>
+		
+			<form action="/login/" method="POST" enctype="multipart/form-data">
+				{% csrf_token %}  
+					<input type="email" name="Email" placeholder="Your Email" required=""> 
+					<input type="password" name="Password" placeholder="Password" required=""> 
+					<input type="submit" value="Sign In">
+					<div class="forgot-grid">
+						<label class="checkbox"><input type="checkbox" name="checkbox">Remember me</label>
+						<div class="forgot">
+							<a href="#" data-toggle="modal" data-target="#myModal2">Forgot Password?</a>
+						</div>
+						<!-- Modal -->
+					
+						<div class="clearfix"> </div>
+					</div>
+				</form>
+				<h6> Not a Member Yet? <a href=" {% static 'signup.html' %} ">Sign Up Now</a> </h6>
+			</div>
+		</div>
+	</section>
+	<!-- //sign in form -->
+	
+</html>
